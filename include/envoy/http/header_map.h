@@ -591,6 +591,18 @@ public:
 using HeaderMapPtr = std::unique_ptr<HeaderMap>;
 
 /**
+ * fixfix
+ */
+class RequestHeaderMap : public virtual HeaderMap {};
+using RequestHeaderMapPtr = std::unique_ptr<RequestHeaderMap>;
+class RequestTrailerMap : public virtual HeaderMap {};
+using RequestTrailerMapPtr = std::unique_ptr<RequestTrailerMap>;
+class ResponseHeaderMap : public virtual HeaderMap {};
+using ResponseHeaderMapPtr = std::unique_ptr<ResponseHeaderMap>;
+class ResponseTrailerMap : public virtual HeaderMap {};
+using ResponseTrailerMapPtr = std::unique_ptr<ResponseTrailerMap>;
+
+/**
  * Convenient container type for storing Http::LowerCaseString and std::string key/value pairs.
  */
 using HeaderVector = std::vector<std::pair<LowerCaseString, std::string>>;

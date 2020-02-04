@@ -56,7 +56,7 @@ public:                                                                         
  * paths use O(1) direct access. In general, we try to copy as little as possible and allocate as
  * little as possible in any of the paths.
  */
-class HeaderMapImpl : public HeaderMap, NonCopyable {
+class HeaderMapImpl : public virtual HeaderMap, NonCopyable {
 public:
   HeaderMapImpl();
   explicit HeaderMapImpl(
@@ -238,7 +238,19 @@ protected:
   ALL_INLINE_HEADERS(DEFINE_INLINE_HEADER_FUNCS)
 };
 
-using HeaderMapImplPtr = std::unique_ptr<HeaderMapImpl>;
+using HeaderMapImplPtr = std::unique_ptr<HeaderMapImpl>; // fixfix remove
+
+/**
+ * fixfix
+ */
+class RequestHeaderMapImpl : public HeaderMapImpl, public RequestHeaderMap {};
+using RequestHeaderMapImplPtr = std::unique_ptr<RequestHeaderMapImpl>;
+class RequestTrailerMapImpl : public HeaderMapImpl, public RequestTrailerMap {};
+using RequestTrailerMapImplPtr = std::unique_ptr<RequestTrailerMapImpl>;
+class ResponseHeaderMapImpl : public HeaderMapImpl, public ResponseHeaderMap {};
+using ResponseHeaderMapImplPtr = std::unique_ptr<ResponseHeaderMapImpl>;
+class ResponseTrailerMapImpl : public HeaderMapImpl, public ResponseTrailerMap {};
+using ResponseTrailerMapImplPtr = std::unique_ptr<ResponseTrailerMapImpl>;
 
 } // namespace Http
 } // namespace Envoy

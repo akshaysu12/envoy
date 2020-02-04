@@ -659,6 +659,22 @@ public:
   void verifyByteSize() override { ASSERT(cached_byte_size_ == byteSizeInternal()); }
 };
 
+/**
+ * fixfix
+ */
+class TestRequestHeaderMapImpl : public TestHeaderMapImpl, public RequestHeaderMap {
+public:
+  TestRequestHeaderMapImpl(const std::initializer_list<std::pair<std::string, std::string>>& values)
+      : TestHeaderMapImpl(values) {}
+};
+
+class TestResponseHeaderMapImpl : public TestHeaderMapImpl, public ResponseHeaderMap {
+public:
+  TestResponseHeaderMapImpl(
+      const std::initializer_list<std::pair<std::string, std::string>>& values)
+      : TestHeaderMapImpl(values) {}
+};
+
 // Helper method to create a header map from an initializer list. Useful due to make_unique's
 // inability to infer the initializer list type.
 inline HeaderMapPtr
