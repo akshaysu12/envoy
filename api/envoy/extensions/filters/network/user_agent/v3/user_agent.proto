@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package envoy.extensions.filters.network.user_agent.v3;
+
+import "udpa/annotations/versioning.proto";
+
+option java_package = "io.envoyproxy.envoy.extensions.filters.network.user_agent.v3";
+option java_outer_classname = "UserAgentProto";
+option java_multiple_files = true;
+
+// [#protodoc-title: UserAgent]
+// Echo :ref:`configuration overview <config_network_filters_user_agent>`.
+// [#extension: envoy.filters.network.user_agent]
+
+message UserAgent {
+  option (udpa.annotations.versioning).previous_message_type =
+      "envoy.config.filter.network.user_agent.v2.UserAgent";
+}

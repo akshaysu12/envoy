@@ -99,6 +99,7 @@ EXTENSIONS = {
     "envoy.filters.network.thrift_proxy":               "//source/extensions/filters/network/thrift_proxy:config",
     "envoy.filters.network.sni_cluster":                "//source/extensions/filters/network/sni_cluster:config",
     "envoy.filters.network.zookeeper_proxy":            "//source/extensions/filters/network/zookeeper_proxy:config",
+    "envoy.filters.network.user_agent":                 "//source/extensions/filters/network/user_agent:config",
 
     #
     # UDP filters
@@ -232,6 +233,7 @@ WINDOWS_EXTENSIONS = {
 
     "envoy.filters.network.client_ssl_auth":            "//source/extensions/filters/network/client_ssl_auth:config",
     #"envoy.filters.network.echo":                       "//source/extensions/filters/network/echo:config",
+    #"envoy.filters.network.user_agent":                 "//source/extensions/filters/network/user_agent:config",
     #"envoy.filters.network.ext_authz":                  "//source/extensions/filters/network/ext_authz:config",
     #"envoy.filters.network.http_connection_manager":    "//source/extensions/filters/network/http_connection_manager:config",
     #"envoy.filters.network.mongo_proxy":                "//source/extensions/filters/network/mongo_proxy:config",

@@ -2,10 +2,12 @@ static_resources:
   listeners:
   - address:
       socket_address:
-        address: 0.0.0.0
+        address: 127.0.0.1
         port_value: 80
     filter_chains:
     - filters:
+      - name: envoy.filters.network.user_agent 
+        typed_config: {}
       - name: envoy.filters.network.http_connection_manager
         typed_config:
           "@type": type.googleapis.com/envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager
@@ -38,10 +40,10 @@ static_resources:
             address:
               socket_address:
                 address: 127.0.0.1
-                port_value: 8080
+                port_value: 8000
 admin:
   access_log_path: "/dev/null"
   address:
     socket_address:
-      address: 0.0.0.0
+      address: 127.0.0.1
       port_value: 8081

@@ -72,6 +72,7 @@ proto_library(
         "//envoy/config/filter/network/direct_response/v2:pkg",
         "//envoy/config/filter/network/dubbo_proxy/v2alpha1:pkg",
         "//envoy/config/filter/network/echo/v2:pkg",
+        "//envoy/config/filter/network/user_agent/v2:pkg",
         "//envoy/config/filter/network/ext_authz/v2:pkg",
         "//envoy/config/filter/network/http_connection_manager/v2:pkg",
         "//envoy/config/filter/network/kafka_broker/v2alpha1:pkg",
