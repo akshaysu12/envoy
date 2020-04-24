@@ -266,11 +266,6 @@ message HttpConnectionManager {
   // processed sequentially as request events happen.
   repeated HttpFilter http_filters = 5;
 
-  // Whether the connection manager manipulates the :ref:`config_http_conn_man_headers_user-agent`
-  // and :ref:`config_http_conn_man_headers_downstream-service-cluster` headers. See the linked
-  // documentation for more information. Defaults to false.
-  google.protobuf.BoolValue add_user_agent = 6;
-
   // Presence of the object defines whether the connection manager
   // emits :ref:`tracing <arch_overview_tracing>` data to the :ref:`configured tracing provider
   // <envoy_api_msg_config.trace.v2.Tracing>`.

@@ -55,6 +55,7 @@ namespace Logger {
   FUNCTION(quic_stream)                                                                            \
   FUNCTION(pool)                                                                                   \
   FUNCTION(rbac)                                                                                   \
+  FUNCTION(user_agent)                                                                             \
   FUNCTION(redis)                                                                                  \
   FUNCTION(router)                                                                                 \
   FUNCTION(runtime)                                                                                \

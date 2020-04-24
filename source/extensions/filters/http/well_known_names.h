@@ -70,6 +70,8 @@ public:
   const std::string AwsRequestSigning = "envoy.filters.http.aws_request_signing";
   // AWS Lambda filter
   const std::string AwsLambda = "envoy.filters.http.aws_lambda";
+  // User Agent filter
+  const std::string UserAgent = "envoy.filters.http.user_agent";
 };
 
 using HttpFilterNames = ConstSingleton<HttpFilterNameValues>;
